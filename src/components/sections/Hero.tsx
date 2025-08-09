@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import GlobeCanvas from "@/components/3d/GlobeCanvas";
+import SplineScene from "@/components/3d/SplineScene";
 import MagneticButton from "@/components/atoms/MagneticButton";
 import { Button } from "@/components/ui/button";
 
@@ -49,7 +49,10 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="relative"
         >
-          <GlobeCanvas />
+          <SplineScene 
+            scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+            className="w-full h-[320px] sm:h-[420px] md:h-[520px]"
+          />
         </motion.div>
       </div>
     </section>
