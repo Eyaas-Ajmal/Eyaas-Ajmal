@@ -3,6 +3,7 @@ import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Projects from "@/components/sections/Projects";
 import MLJourney from "@/components/sections/MLJourney";
+import Courses from "@/components/sections/Courses";
 import Contact from "@/components/sections/Contact";
 import Header from "@/components/sections/Header";
 import CursorGlow from "@/components/effects/CursorGlow";
@@ -22,6 +23,7 @@ const Index = () => {
         <About />
         <Projects />
         <MLJourney />
+        <Courses />
         <Contact />
       </main>
       <footer className="py-8 text-center text-sm text-muted-foreground">© {new Date().getFullYear()} Eyaas. All rights reserved.</footer>
