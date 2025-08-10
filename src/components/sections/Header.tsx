@@ -1,4 +1,4 @@
-import ThemeToggle from "@/components/ThemeToggle";
+
 
 const Header = () => {
   return (
@@ -8,10 +8,11 @@ const Header = () => {
         <nav className="hidden sm:flex items-center gap-6 text-sm">
           <a className="story-link" href="#about">About</a>
           <a className="story-link" href="#projects">Projects</a>
+          <a className="story-link" href="#courses">Courses/Certs</a>
           <a className="story-link" href="#ml">ML Journey</a>
           <a className="story-link" href="#contact">Contact</a>
         </nav>
-        <ThemeToggle />
+        
       </div>
     </header>
   );

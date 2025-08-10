@@ -5,6 +5,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { motion } from "framer-motion";
 import { Download, FileCode, Code2, Atom, Brain, Server, Database } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 const skills = [
   "JavaScript/TypeScript",
@@ -18,7 +19,8 @@ const skills = [
   "Docker",
 ];
 
-const detailedSkills = [
+type SkillItem = { name: string; subtitle: string; v: number; Icon: LucideIcon };
+const detailedSkills: SkillItem[] = [
   { name: "Python", subtitle: "Data Science & Backend", v: 95, Icon: FileCode },
   { name: "JavaScript", subtitle: "Frontend & Full-Stack", v: 90, Icon: Code2 },
   { name: "React", subtitle: "UI Framework", v: 88, Icon: Atom },
@@ -36,7 +38,7 @@ const stats = [
 
 const About = () => {
   return (
-    <section id="about" className="py-16 sm:py-20">
+    <section id="about" className="py-16 sm:py-20 animate-fade-in">
       <div className="container mx-auto px-4">
         <article className="glass rounded-2xl p-6 sm:p-10">
           <header className="mb-8">
@@ -46,9 +48,9 @@ const About = () => {
 
           <div className="grid md:grid-cols-12 gap-8 items-start">
             {/* Left: Portrait + Quick Stats */}
-            <div className="md:col-span-5 space-y-6">
+            <div className="md:col-span-4 space-y-6 sm:max-w-sm md:max-w-none">
               <div className="relative rounded-2xl border border-primary/20 shadow-[var(--shadow-glow)] bg-gradient-to-br from-primary/10 to-accent/10 p-2">
-                <AspectRatio ratio={4 / 5}>
+                <AspectRatio ratio={3 / 4}>
                   <img
                     src="/lovable-uploads/80607c52-3ca7-47d9-bf90-c7ccf791a76e.png"
                     alt="Professional profile portrait"
@@ -67,7 +69,7 @@ const About = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.4 }}
                     transition={{ duration: 0.3 }}
-                    className="rounded-xl border bg-card text-card-foreground p-4 sm:p-5 shadow-sm"
+                    className="rounded-xl border bg-card text-card-foreground p-4 sm:p-5 shadow-sm hover-scale"
                   >
                     <div className="text-2xl sm:text-3xl font-bold text-primary">{s.value}</div>
                     <div className="text-xs sm:text-sm text-muted-foreground">{s.label}</div>
