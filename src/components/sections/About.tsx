@@ -4,7 +4,7 @@ import { Progress } from "@/components/ui/progress";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { motion } from "framer-motion";
-import { Download } from "lucide-react";
+import { Download, FileCode, Code2, Atom, Brain, Server, Database } from "lucide-react";
 
 const skills = [
   "JavaScript/TypeScript",
@@ -18,10 +18,13 @@ const skills = [
   "Docker",
 ];
 
-const skillProgress = [
-  { label: "Frontend", v: 90 },
-  { label: "Backend", v: 85 },
-  { label: "ML/AI", v: 80 },
+const detailedSkills = [
+  { name: "Python", subtitle: "Data Science & Backend", v: 95, Icon: FileCode },
+  { name: "JavaScript", subtitle: "Frontend & Full-Stack", v: 90, Icon: Code2 },
+  { name: "React", subtitle: "UI Framework", v: 88, Icon: Atom },
+  { name: "Machine Learning", subtitle: "AI & Algorithms", v: 82, Icon: Brain },
+  { name: "Node.js", subtitle: "Backend Runtime", v: 85, Icon: Server },
+  { name: "Databases", subtitle: "SQL & NoSQL", v: 80, Icon: Database },
 ];
 
 const stats = [
@@ -47,7 +50,7 @@ const About = () => {
               <div className="relative rounded-2xl border border-primary/20 shadow-[var(--shadow-glow)] bg-gradient-to-br from-primary/10 to-accent/10 p-2">
                 <AspectRatio ratio={4 / 5}>
                   <img
-                    src="/lovable-uploads/83a724f8-996b-485d-9e36-966c4b5cc156.png"
+                    src="/lovable-uploads/80607c52-3ca7-47d9-bf90-c7ccf791a76e.png"
                     alt="Professional profile portrait"
                     className="h-full w-full rounded-xl object-cover"
                     loading="lazy"
@@ -107,14 +110,18 @@ const About = () => {
               <div className="flex flex-wrap items-center gap-3 pt-2">
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <span>
-                      <Button disabled className="hover-scale" aria-disabled>
+                    <a
+                      href="/lovable-uploads/a70fe7ac-e43e-4922-b310-7862adbd12a2.png"
+                      download="Eyaas-Ajmal-CV.png"
+                      aria-label="Download professional resume"
+                    >
+                      <Button className="hover-scale">
                         <Download className="mr-2 h-4 w-4" aria-hidden />
                         Download Resume
                       </Button>
-                    </span>
+                    </a>
                   </TooltipTrigger>
-                  <TooltipContent>Resume coming soon</TooltipContent>
+                  <TooltipContent>Download my CV</TooltipContent>
                 </Tooltip>
               </div>
 
@@ -137,22 +144,40 @@ const About = () => {
           {/* Skills & Proficiency */}
           <section className="mt-10">
             <h3 className="text-xl font-semibold mb-4">Skills &amp; Proficiency</h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {skillProgress.map((item, i) => (
-                <div key={item.label} className="rounded-xl border bg-card p-4 shadow-sm">
-                  <div className="mb-2 flex items-center justify-between text-sm">
-                    <span className="font-medium">{item.label}</span>
-                    <span className="text-muted-foreground">{item.v}%</span>
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
+              {detailedSkills.map((s, i) => (
+                <motion.article
+                  key={s.name}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.4 }}
+                  transition={{ duration: 0.35, delay: i * 0.05 }}
+                  className="rounded-2xl border border-primary/20 bg-card/60 p-4 sm:p-5 shadow-sm hover:shadow-[var(--shadow-glow)] hover-scale"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="flex items-start gap-3">
+                      <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary/15 to-accent/15 grid place-items-center border border-primary/20">
+                        <s.Icon className="h-5 w-5 text-primary" aria-hidden />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold">{s.name}</h4>
+                        <p className="text-xs text-muted-foreground">{s.subtitle}</p>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-primary">{s.v}%</div>
+                      <div className="text-xs text-muted-foreground">Proficiency</div>
+                    </div>
                   </div>
                   <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.4, delay: i * 0.05 }}
+                    viewport={{ once: true, amount: 0.6 }}
+                    transition={{ duration: 0.5, delay: i * 0.05 }}
                   >
-                    <Progress value={item.v} />
+                    <Progress value={s.v} className="mt-3" />
                   </motion.div>
-                </div>
+                </motion.article>
               ))}
             </div>
           </section>
