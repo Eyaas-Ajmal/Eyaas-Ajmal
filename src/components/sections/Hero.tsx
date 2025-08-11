@@ -13,9 +13,16 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight font-sans glow-text"
-          >
-            Eyaas – Full Stack Data Scientist
+            className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight font-sans glow-text">
+            Eyaas Ajmal
+          </motion.h1>
+          <br />
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl sm:text-4xl md:text-4xl tracking-tight font-sans glow-text">
+            Full Stack Data Scientist
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

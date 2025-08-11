@@ -8,8 +8,8 @@ const Header = () => {
         <nav aria-label="Primary" className="hidden sm:flex items-center gap-6 text-sm justify-self-center">
           <a className="story-link" href="#about">About</a>
           <a className="story-link" href="#projects">Projects</a>
-          <a className="story-link" href="#courses">Courses/Certs</a>
-          <a className="story-link" href="#ml">ML Journey</a>
+          <a className="story-link" href="#ml">Journey</a>
+          <a className="story-link" href="#courses">Certifications</a>
           <a className="story-link" href="#contact">Contact</a>
         </nav>
         <div className="justify-self-end" aria-hidden="true" />

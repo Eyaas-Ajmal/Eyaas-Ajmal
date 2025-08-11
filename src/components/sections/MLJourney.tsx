@@ -106,7 +106,7 @@ const MLJourney = () => {
                   {/* Middle dot */}
                   <div className="md:col-span-2 order-1 md:order-2 flex md:block justify-center">
                     <div className="relative">
-                      <span className="block h-3 w-3 rounded-full bg-accent ring-4 ring-background" />
+                      <span className="block h-3 w-3 rounded-full bg-white ring-4 ring-background" />
                     </div>
                   </div>
 
@@ -138,14 +138,14 @@ const MLJourney = () => {
 
                   {/* Year labels under on small screens */}
                   <div className="md:hidden col-span-full text-center">
-                    <div className="text-sm font-medium text-accent">{s.year}</div>
+                    <div className="text-sm font-medium text-white">{s.year}</div>
                     <div className="text-xs text-muted-foreground">{s.subtitle}</div>
                   </div>
 
                   {/* Year labels on sides for md+ */}
                   <div className={`hidden md:block absolute ${
                     isLeft ? "-translate-x-[calc(50%+1rem)] left-1/2" : "translate-x-[calc(50%+1rem)] left-1/2"
-                  } text-accent text-sm font-semibold mt-[-6px]`}>
+                  } text-white text-sm font-semibold mt-[-6px]`}>
                     {s.year}
                   </div>
                 </li>

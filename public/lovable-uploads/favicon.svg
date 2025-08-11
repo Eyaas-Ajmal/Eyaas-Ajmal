@@ -1,0 +1,47 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 128 128" role="img" aria-label="E logo">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#7CFF9A"></stop>
+      <stop offset="0.6" stop-color="#00E36A"></stop>
+      <stop offset="1" stop-color="#00B33C"></stop>
+    </linearGradient>
+
+    <!-- soft neon glow -->
+    <filter id="neon" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="blur1"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur1"></feMergeNode>
+        <feMergeNode in="blur1"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <!-- background shadow -->
+    <filter id="bgShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="s"></feGaussianBlur>
+      <feOffset dx="0" dy="2" in="s" result="off"></feOffset>
+      <feMerge><feMergeNode in="off"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge>
+    </filter>
+  </defs>
+
+  <!-- dark rounded square -->
+  <rect x="4" y="4" width="120" height="120" rx="18" ry="18" fill="#060606"></rect>
+  <!-- faint inner vignette -->
+  <rect x="6" y="6" width="116" height="116" rx="16" ry="16" fill="url(#g1)" opacity="0.03"></rect>
+
+  <!-- glowing E (three bars + spine) -->
+  <g filter="url(#neon)">
+    <!-- vertical spine -->
+    <rect x="30" y="22" width="16" height="84" rx="6" fill="url(#g1)"></rect>
+    <!-- top bar -->
+    <rect x="46" y="18" width="58" height="14" rx="6" fill="url(#g1)"></rect>
+    <!-- middle bar -->
+    <rect x="46" y="47" width="46" height="14" rx="6" fill="url(#g1)"></rect>
+    <!-- bottom bar -->
+    <rect x="46" y="76" width="58" height="14" rx="6" fill="url(#g1)"></rect>
+  </g>
+
+  <!-- subtle outer highlight -->
+  <rect x="4" y="4" width="120" height="120" rx="18" ry="18" fill="none" stroke="#0bff7a" stroke-opacity="0.04"></rect>
+</svg>
