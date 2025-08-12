@@ -1,23 +1,37 @@
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 const projects = [
   {
+    title: "Binary Image Classification Model",
+    stack: ["Python", "TensorFlow", "Keras", "OpenCV", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn", "Pandas", "SciPy"],
+    description: "A binary image classification model that can classify images into two classes: 'cat' and 'dog'.",
+  },
+  {
+    title: "My Portfolio Website",
+    stack: ["React", "Tailwind CSS", "Vite", "TypeScript", "Shadcn UI", "Framer Motion", "Vercel", "GSAP","GIT"],
+    description: "My Portfolio Website, your viewing it currently",
+  },
+  {
     title: "Library Management System",
-    stack: ["PHP", "HTML", "CSS", "JavaScript"],
+    stack: ["PHP", "HTML", "CSS", "JavaScript","GIT"],
     description: "A complete library system with cataloging, lending, and admin dashboards.",
   },
   {
     title: "Computer Inventory Management",
-    stack: ["Java"],
+    stack: ["Java", "MySQL", "JDBC", "Tomcat","GIT"],
     description: "Track hardware assets, lifecycle, and utilization with reports.",
   },
   {
     title: "Pet Universe",
-    stack: ["MERN"],
+    stack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Redux", "JWT", "Stripe","GIT"],
     description: "A full‑stack social and marketplace platform for pet lovers.",
+  },
+  {
+    title: "Smart Ticket Support System",
+    stack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Redux", "JWT", "Stripe", "Python", "Flask", "MySQL"],
+    description: "A smart ticket support system for managing customer queries and support tickets.",
   },
 ];
 
@@ -78,20 +92,14 @@ const Projects = () => {
   return (
     <section id="projects" className="py-16 sm:py-20">
       <div className="container mx-auto px-4">
-        <div className="flex items-end justify-between mb-6">
+        <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-semibold">Projects</h2>
         </div>
-        <Carousel className="relative">
-          <CarouselContent>
-            {projects.map((p, i) => (
-              <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/3">
-                <ProjectCard p={p} />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((p, i) => (
+            <ProjectCard key={i} p={p} />
+          ))}
+        </div>
       </div>
     </section>
   );
