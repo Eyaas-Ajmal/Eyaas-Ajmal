@@ -17,13 +17,13 @@ const Hero = () => {
             Eyaas Ajmal
           </motion.h1>
           <br />
-          <motion.h1
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl sm:text-4xl md:text-4xl tracking-tight font-sans glow-text">
-            Full Stack Data Scientist
-          </motion.h1>
+            className="text-2xl sm:text-3xl md:text-4xl tracking-tight font-medium text-muted-foreground/80 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+            Full Stack AI-ML Engineer
+          </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

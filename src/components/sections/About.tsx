@@ -21,12 +21,12 @@ const skills = [
 
 type SkillItem = { name: string; subtitle: string; v: number; Icon: LucideIcon };
 const detailedSkills: SkillItem[] = [
-  { name: "Python", subtitle: "Data Science & Backend", v: 95, Icon: FileCode },
-  { name: "JavaScript", subtitle: "Frontend & Full-Stack", v: 90, Icon: Code2 },
-  { name: "React", subtitle: "UI Framework", v: 88, Icon: Atom },
+  { name: "Python", subtitle: "Data Science", v: 89, Icon: FileCode },
   { name: "Machine Learning", subtitle: "AI & Algorithms", v: 82, Icon: Brain },
-  { name: "Node.js", subtitle: "Backend Runtime", v: 85, Icon: Server },
-  { name: "Databases", subtitle: "SQL & NoSQL", v: 80, Icon: Database },
+  { name: "JavaScript", subtitle: "Frontend & Full-Stack", v: 80, Icon: Code2 },
+  { name: "React", subtitle: "UI Framework", v: 78, Icon: Atom },
+  { name: "Node.js", subtitle: "Backend Runtime", v: 65, Icon: Server },
+  { name: "Databases", subtitle: "SQL & NoSQL", v: 70, Icon: Database },
 ];
 
 const stats = [
@@ -42,7 +42,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         <article className="glass rounded-2xl p-6 sm:p-10">
           <header className="mb-8">
-            <h2 className="text-3xl sm:text-4xl font-semibold">About Me</h2>
+            <h2 className="text-3xl sm:text-4xl font-semibold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">About Me</h2>
             <p className="sr-only">Portfolio introduction and skills</p>
           </header>
 

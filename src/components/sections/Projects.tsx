@@ -9,9 +9,14 @@ const projects = [
     description: "A binary image classification model that can classify images into two classes: 'cat' and 'dog'.",
   },
   {
-    title: "My Portfolio Website",
-    stack: ["React", "Tailwind CSS", "Vite", "TypeScript", "Shadcn UI", "Framer Motion", "Vercel", "GSAP","GIT"],
-    description: "My Portfolio Website, your viewing it currently",
+    title: "Pet Universe",
+    stack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Redux", "JWT", "Stripe","GIT"],
+    description: "A full‑stack social and marketplace platform for pet lovers.",
+  },
+  {
+    title: "Smart Ticket Support System",
+    stack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Redux", "JWT", "Stripe", "Python", "Flask", "MySQL"],
+    description: "A smart ticket support system for managing customer queries and support tickets.",
   },
   {
     title: "Library Management System",
@@ -24,15 +29,10 @@ const projects = [
     description: "Track hardware assets, lifecycle, and utilization with reports.",
   },
   {
-    title: "Pet Universe",
-    stack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Redux", "JWT", "Stripe","GIT"],
-    description: "A full‑stack social and marketplace platform for pet lovers.",
-  },
-  {
-    title: "Smart Ticket Support System",
-    stack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Redux", "JWT", "Stripe", "Python", "Flask", "MySQL"],
-    description: "A smart ticket support system for managing customer queries and support tickets.",
-  },
+    title: "My Portfolio Website",
+    stack: ["React", "Tailwind CSS", "Vite", "TypeScript", "Shadcn UI", "Framer Motion", "Vercel", "GSAP","GIT"],
+    description: "My Portfolio Website, your viewing it currently",
+  }
 ];
 
 const ProjectCard = ({ p }: { p: (typeof projects)[number] }) => {
@@ -93,7 +93,7 @@ const Projects = () => {
     <section id="projects" className="py-16 sm:py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-semibold">Projects</h2>
+          <h2 className="text-3xl sm:text-4xl font-semibold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">Projects</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((p, i) => (

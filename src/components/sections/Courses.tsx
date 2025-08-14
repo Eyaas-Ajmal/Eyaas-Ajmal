@@ -13,28 +13,27 @@ interface Item {
 
 const items: Item[] = [
   {
-    title: "Stanford CS231n: Convolutional Neural Networks for Visual Recognition",
-    issuer: "Stanford / OpenCourse",
+    title: "Machine learning with Python",
+    issuer: "Simplilearn",
     year: "2025",
     type: "Course",
-    link: "https://cs231n.github.io/",
   },
   {
     title: "DeepLearning.AI – Machine Learning Specialization",
-    issuer: "Coursera / Andrew Ng",
+    issuer: "Andrew Ng",
     year: "2024",
     type: "Certification",
     link: "https://www.coursera.org/specializations/machine-learning-introduction",
   },
   {
     title: "Data Science Bootcamp",
-    issuer: "General Assembly (example)",
+    issuer: "FreeCodeCamp",
     year: "2023",
     type: "Course",
   },
   {
     title: "Python for Data Analysis",
-    issuer: "Udemy (example)",
+    issuer: "FreeCodeCamp",
     year: "2023",
     type: "Course",
   },
@@ -45,7 +44,7 @@ const Courses = () => {
     <section id="courses" className="py-16 sm:py-24 animate-fade-in">
       <div className="container mx-auto px-4">
         <header className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl font-semibold">Courses & Certifications</h2>
+          <h2 className="text-3xl sm:text-4xl font-semibold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">Courses & Certifications</h2>
           <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
             A curated selection of courses and credentials that shaped my ML/AI journey.
           </p>

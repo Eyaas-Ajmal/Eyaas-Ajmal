@@ -7,12 +7,22 @@ gsap.registerPlugin(ScrollTrigger);
 const steps = [
   {
     year: "2025",
+    title: "Agentic AI",
+    subtitle: "Current Focus",
+    details: "DeepSeek, OpenAI, Anthropic, Gemini, Claude, Qwen, Llama, etc.",
+    status: [
+      { label: "In Progress", tone: "primary" },
+      { label: "~35%", tone: "primary" },
+    ],
+  },
+  {
+    year: "2025",
     title: "Advanced Deep Learning",
     subtitle: "Current Focus",
     details: "Transformers, CS231n, optimization & scaling laws",
     status: [
-      { label: "In Progress", tone: "accent" },
-      { label: "~85%", tone: "primary" },
+      { label: "In Progress", tone: "primary" },
+      { label: "~25%", tone: "primary" },
     ],
   },
   {
@@ -22,7 +32,7 @@ const steps = [
     details: "Andrew Ng, Python for Data Science, end‑to‑end ML",
     status: [
       { label: "Completed", tone: "success" },
-      { label: "Certified", tone: "accent" },
+      { label: "Certified", tone: "primary" },
     ],
   },
   {
@@ -62,7 +72,7 @@ const MLJourney = () => {
     <section id="ml" className="py-16 sm:py-24">
       <div className="container mx-auto px-4">
         <header className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl font-semibold">Learning Journey</h2>
+          <h2 className="text-3xl sm:text-4xl font-semibold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">Learning Curve</h2>
           <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
             A continuous evolution through ML/AI—from foundations to advanced research and deployment.
           </p>

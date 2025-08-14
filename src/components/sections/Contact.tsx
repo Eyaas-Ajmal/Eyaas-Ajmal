@@ -50,7 +50,7 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-10 items-start">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-semibold mb-4">Contact Me</h2>
+            <h2 className="text-3xl sm:text-4xl font-semibold mb-4 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">Contact Me</h2>
             <p className="text-muted-foreground mb-6">Have a project in mind or want to collaborate? Drop a message.</p>
             <form onSubmit={onSubmit} className="space-y-4 glass rounded-xl p-6">
               <Input name="name" placeholder="Your name" aria-label="Name" />
