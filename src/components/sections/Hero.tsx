@@ -14,7 +14,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight font-sans glow-text">
-            Eyaas Ajmal
+            Eyaas Ajmal fiuuu
           </motion.h1>
           <br />
           <motion.h2
