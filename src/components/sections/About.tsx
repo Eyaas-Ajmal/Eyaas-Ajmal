@@ -113,7 +113,7 @@ const About = () => {
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <a
-                      href="/lovable-uploads/a70fe7ac-e43e-4922-b310-7862adbd12a2.png"
+                      href="/lovable-uploads/Eyaas-CV.jpg"
                       download="Eyaas-Ajmal-CV.png"
                       aria-label="Download professional resume"
                     >
