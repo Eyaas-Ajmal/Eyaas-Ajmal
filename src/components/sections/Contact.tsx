@@ -66,9 +66,9 @@ const Contact = () => {
             <div className="glass rounded-xl p-6">
               <h3 className="text-lg font-medium mb-3">Connect</h3>
               <div className="flex items-center gap-4">
-                <a href="#" aria-label="Email" className="story-link"><Mail /></a>
-                <a href="#" aria-label="GitHub" className="story-link"><Github /></a>
-                <a href="#" aria-label="LinkedIn" className="story-link"><Linkedin /></a>
+                <a href="mailto:eyaasofficial@gmail.com" aria-label="Email" className="story-link"><Mail /></a>
+                <a href="https://github.com/Eyaas-Ajmal" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="story-link"><Github /></a>
+                <a href="https://www.linkedin.com/in/eyaas-ajmal-da-4ngel/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="story-link"><Linkedin /></a>
               </div>
             </div>
           </div>
